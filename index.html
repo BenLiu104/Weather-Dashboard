@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- JqueryUI CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css"
+        integrity="sha512-ELV+xyi8IhEApPS/pSj66+Jiw+sOT1Mqkzlh8ExXihe4zfqbWkxPRi8wptXIO9g73FSlhmquFlUOuMSoXz5IRw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <header>
+
+        <h1 class="display-1">Weather Dashboard</h1>
+
+    </header>
+    <main class="container-fluid bg-primary ">
+        <div class="row">
+            <div class="col-12 col-md-3">
+                <div class="mb-3">
+                    <label for="" class="form-label">Search for City</label>
+                    <input type="text" class="form-control" name="" id="search" aria-describedby="helpId" placeholder="">
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-secondary" id="submitBtn">Submit</button>
+                    </div>
+
+                </div>
+                <div class="btn-group w-100 ">
+                    <div class="d-grid gap-2 w-100">
+                        <button type="button" id="" class="btn btn-secondary btn-block w-100">History1</button>
+                        <button type="button" id="" class="btn btn-secondary btn-block w-100">History2</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-12 col-md-9">
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <h1 class="display-2"><span>City</span> <span>Date</span> <span>icon</span></h1>
+                        <p><span>Temp:</span> <span>23</span></p>
+                        <p><span>Wind:</span> <span>20</span></p>
+                        <p><span>Humidity:</span> <span>80</span></p>
+                        <p><span>UV Index:</span> <span>0.5</span></p>
+                    </div>
+                    <div class="row">
+                        <h1 class="display">5-days Forecast</h1>
+                    </div>
+                    <div class="container-fluid w-100">
+                        <div class="row justify-content-between">
+                                <div class="card col-lg-2">
+                                    <div class="card-header">
+                                        Day1
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">icon</h4>
+                                        <p class="card-text">Temp:</p>
+                                        <p class="card-text">Wind:</p>
+                                        <p class="card-text">Humidity:</p>
+                                    </div>
+                                   
+                                </div>
+                                <div class="card col-lg-2">
+                                    <div class="card-header">
+                                        Day2
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">icon</h4>
+                                        <p class="card-text">Temp:</p>
+                                        <p class="card-text">Wind:</p>
+                                        <p class="card-text">Humidity:</p>
+                                    </div>
+                                    
+                                </div>
+                                <div class="card col-lg-2">
+                                    <div class="card-header">
+                                        Day3
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">icon</h4>
+                                        <p class="card-text">Temp:</p>
+                                        <p class="card-text">Wind:</p>
+                                        <p class="card-text">Humidity:</p>
+                                    </div>
+                                   
+                                </div>
+                                <div class="card col-lg-2">
+                                    <div class="card-header">
+                                        Day4
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">icon</h4>
+                                        <p class="card-text">Temp:</p>
+                                        <p class="card-text">Wind:</p>
+                                        <p class="card-text">Humidity:</p>
+                                    </div>
+                                   
+                                </div>
+                                <div class="card col-lg-2">
+                                    <div class="card-header">
+                                        Day5
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">icon</h4>
+                                        <p class="card-text">Temp:</p>
+                                        <p class="card-text">Wind:</p>
+                                        <p class="card-text">Humidity:</p>
+                                    </div>
+                                    
+                                </div>
+                            
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+
+    <!-- Jquery JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- Luxon JS API -->
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.0.4/build/global/luxon.min.js"></script>
+    <!-- JqueryUI JS API -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
+        integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+        integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous">
+        </script>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
