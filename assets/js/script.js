@@ -59,6 +59,11 @@ let histroyList = [];
 $("#searchForm").on("submit", function (e) {
     e.preventDefault();
     let city = $("#search").val()
+    console.log(city);
+    if(city==""){
+        alert("Please enter a city name");
+        return;
+    }
     currentStatus(city);
     fiveDayStatus(city);
     saveToLocal(city);
@@ -73,6 +78,7 @@ function currentStatus(city) {
         return response.json();
     })
         .then(function (data) {
+            console.log(data);
             //extract data from response json object
             now = DateTime.now().toISODate();
             icon = data.weather[0].icon;
@@ -99,7 +105,7 @@ function fiveDayStatus(city) {
         return response.json();
     })
         .then(function (data) {
-
+            console.log(data);
             //iteration to get & show 5-day data
             let j = 1;
             for (let i = 0; i < 40; i = i + 8) {
