@@ -2,7 +2,6 @@
 $(function () {
     var availableTags = [
         "Toronto",
-        "New York",
         "TOKYO",
         "JAKARTA",
         "New York",
@@ -59,7 +58,6 @@ let histroyList = [];
 $("#searchForm").on("submit", function (e) {
     e.preventDefault();
     let city = $("#search").val()
-    console.log(city);
     if (city == "") {
         alert("Please enter a city name");
         return;
@@ -89,7 +87,7 @@ function currentStatus(city) {
             wind = data.wind.speed;
             humi = data.main.humidity;
             //put data to corresponding field in html
-            $("#iconCurrent").attr("src", `http://openweathermap.org/img/wn/${icon}@2x.png`);
+            $("#iconCurrent").attr("src", `https://openweathermap.org/img/wn/${icon}@2x.png`);
             $("#tempCurrent").eq(0).text(temp + " °C");
             $("#windCurrent").eq(0).text(wind + " m/s");
             $("#humiCurrent").eq(0).text(humi + " %");
