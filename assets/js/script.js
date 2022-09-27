@@ -60,7 +60,7 @@ $("#searchForm").on("submit", function (e) {
     e.preventDefault();
     let city = $("#search").val()
     console.log(city);
-    if(city==""){
+    if (city == "") {
         alert("Please enter a city name");
         return;
     }
@@ -75,10 +75,13 @@ $("#searchForm").on("submit", function (e) {
 function currentStatus(city) {
     let requestURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=6799dd7ae6e0eccdfff553d7b932cb9f`;
     fetch(requestURL).then(function (response) {
+        if (response.status == 404) {
+            alert("Please enter a valid city name");
+            return;
+        }
         return response.json();
     })
         .then(function (data) {
-            console.log(data);
             //extract data from response json object
             now = DateTime.now().toISODate();
             icon = data.weather[0].icon;
@@ -94,6 +97,7 @@ function currentStatus(city) {
             $("#today").text(now)
             //set the information visible
             $("#mainContent").removeClass("invisible").addClass("container-fluid");
+            
         });
 }
 
@@ -105,7 +109,6 @@ function fiveDayStatus(city) {
         return response.json();
     })
         .then(function (data) {
-            console.log(data);
             //iteration to get & show 5-day data
             let j = 1;
             for (let i = 0; i < 40; i = i + 8) {
