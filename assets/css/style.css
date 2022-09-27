@@ -2,3 +2,7 @@ header{
     background-color: lightblue;
     text-align: center;
 }
+
+#forecast-box{
+    padding-bottom: 20px;
+}
