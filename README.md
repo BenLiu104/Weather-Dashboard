@@ -3,7 +3,7 @@
 
 ## Description
 
-This project is to buildto a weather dashboard to show current and future 5-day weather forecast of a city.
+This project is to build  a weather dashboard to show current and future 5-day weather forecast of a city.
 ## Installation
 
 N/A
